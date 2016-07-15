@@ -1,0 +1,1 @@
+{"Member": {"ColumSection": "ISMB 500", "fu (MPa)": 410, "BeamSection": "ISMB 300", "fy (MPa)": 250, "Connectivity": "Beam-Beam"}, "Load": {"ShearForce (kN)": 120.0}, "cleat": {"section": "ISA  130X130X12", "Height (mm)": 0.0}, "Bolt": {"Grade": 8.8, "Diameter (mm)": 30, "Type": "HSFG"}}

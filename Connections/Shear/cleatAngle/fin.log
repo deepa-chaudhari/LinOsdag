@@ -1,0 +1,1753 @@
+<link rel="stylesheet" type="text/css" href="Connections/Shear/cleatAngle/log.css"/>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:41:49</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:41:49</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:41:49</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:41:49</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:42:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:42:33</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:42:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:42:33</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:26</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:26</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:26</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:26</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:54</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:54</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:54</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:43:54</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:15</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:15</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:15</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:15</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:15</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:40</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:40</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 132 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:40</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:40</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:40</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:48</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:48</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:48</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:44:48</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:26</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:26</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:26</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:26</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:39</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:39</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:39</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:45:39</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:49:52</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:49:52</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 12:49:52</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 12:49:52</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 14:37:44</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 14:37:44</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 14:37:44</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 14:37:44</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:03</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:03</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:03</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:03</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:45</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:45</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:45</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall cleat Angle connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:02:45</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:22</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:22</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:22</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:22</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:22</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:29</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:29</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:29</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:29</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:29</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:42</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:42</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:42</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:42</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:42</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:49</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:49</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:49</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:49</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:03:49</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:01</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:01</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:01</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:01</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:01</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:19</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:19</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:19</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:19</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:19</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:27</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:27</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:27</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:27</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:04:27</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:28</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:28</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:28</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:28</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:28</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:36</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:36</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:36</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:36</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:36</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:41</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:41</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:41</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:41</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:19:41</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:05</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:05</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:05</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:05</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:05</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:16</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:16</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:16</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:16</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:20:16</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in column on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:33</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 108 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:43</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:51</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:51</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 132 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:51</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:51</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:22:51</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:02</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in column on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:02</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:02</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:02</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:02</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:12</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:12</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:12</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:12</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:12</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:44</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:44</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:44</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:44</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:44</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:45</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:45</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:45</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:45</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:45</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:47</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Column cannot accommodate the given cleat agle due to space restriction</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:47</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Cleat legsize of the cleat angle should be less than or equal to 100.00 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:47</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Decrease the cleat legsize</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:47</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:23:47</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:33</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:41</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:49</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:24:56</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:07</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:11</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:17</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:24</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:31</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:34</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 15:25:38</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:42</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:44</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Edge distance in the beam web is less than the minimum edge distance as per IS 800:2007[cl.10.2.4.2]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum leg size of the cleat Angle required is 207 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">:Cross center distance between bolt lines in primary beam on either side of the supported beam is less than the specified gauge [reference-JSC:ch.4 check-1]</span>
+    </div>
+
+    <div  class="LOG WARNING">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">WARNING</span>
+        <span class="MSG">:Minimum specified cross center gauge is 90 mm</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">:Increase the cleat leg size</span>
+    </div>
+
+    <div  class="LOG ERROR">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">ERROR</span>
+        <span class="MSG">: Design is not safe 
+ </span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 21 Jun 2016 17:23:52</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>

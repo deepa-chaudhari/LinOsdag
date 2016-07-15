@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="Connections/Shear/Endplate/log.css"/>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Wed, 13 Jul 2016 10:21:40</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Wed, 13 Jul 2016 10:21:40</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Wed, 13 Jul 2016 10:21:40</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Wed, 13 Jul 2016 10:21:40</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Wed, 13 Jul 2016 14:30:20</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Wed, 13 Jul 2016 14:30:20</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Wed, 13 Jul 2016 14:30:33</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Wed, 13 Jul 2016 14:30:33</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Wed, 13 Jul 2016 14:31:09</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Wed, 13 Jul 2016 14:31:09</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Wed, 13 Jul 2016 14:32:52</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Wed, 13 Jul 2016 14:32:52</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>

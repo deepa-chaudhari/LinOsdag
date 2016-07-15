@@ -1,0 +1,25 @@
+{
+    "Bolt": {
+        "Diameter (mm)": 20, 
+        "Grade": 8.8, 
+        "Type": "HSFG"
+    }, 
+    "Load": {
+        "ShearForce (kN)": 140
+    }, 
+    "Member": {
+        "BeamSection": "ISMB 400", 
+        "ColumSection": "ISSC 250", 
+        "Connectivity": "Column flange-Beam web", 
+        "fu (MPa)": 410, 
+        "fy (MPa)": 250
+    }, 
+    "Plate": {
+        "Height (mm)": 0, 
+        "Thickness (mm)": 12, 
+        "Width (mm)": 0
+    }, 
+    "Weld": {
+        "Size (mm)": 10
+    }
+}
