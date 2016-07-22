@@ -5,31 +5,27 @@ comment
 @author: deepa
 '''
 from PyQt4.QtCore import QString, pyqtSignal
-
 from OCC.TopoDS import topods, TopoDS_Shape
 from OCC.gp import gp_Pnt
 from nutBoltPlacement import NutBoltArray
 from OCC import VERSION, BRepTools
-# from ui_finPlate import Ui_MainWindow
 from ui_finPlate import Ui_MainWindow
 from ui_summary_popup import Ui_Dialog
 from model import *
 from finPlateCalc import finConn
 import yaml
 import pickle,json
-
 from OCC.BRepAlgoAPI import BRepAlgoAPI_Fuse
 from OCC.Quantity import Quantity_NOC_SADDLEBROWN
 from ISection import ISection
 from OCC.Graphic3d import Graphic3d_NOT_2D_ALUMINUM
-from weld import  Weld
+#from weld import  Weld
 from plate import Plate
 from bolt import Bolt
 from nut import Nut 
 from notch import Notch
 import os.path
 from utilities import osdagDisplayShape
-# from OCC.Display.qtDisplay import qtViewer3d
 from colWebBeamWebConnectivity import ColWebBeamWeb
 from colFlangeBeamWebConnectivity import ColFlangeBeamWeb
 from beamWebBeamWebConnectivity import BeamWebBeamWeb
@@ -46,13 +42,10 @@ from PyQt4.Qt import QPrinter
 from reportGenerator import *
 from ModelUtils import getGpPt
 ##### Testing imports
-from OCC.BRepPrimAPI import BRepPrimAPI_MakeSphere
 import OCC.V3d
 import pdfkit
 import shutil
-# from OCC.Display.backend import get_backend
-# get_backend("qt-pyqt4")
-# import OCC.Display.qtDisplay
+from commonLogic import CommonDesignLogic
 
 class MyPopupDialog(QtGui.QDialog):
     
@@ -309,9 +302,6 @@ class MainController(QtGui.QMainWindow):
             self.ui.combo_Beam.setCurrentIndex(0)
             self.ui.comboColSec.setCurrentIndex(0)
 
-                
-        
-    
     def showFontDialogue(self):
         
         font, ok = QtGui.QFontDialog.getFont()
@@ -1418,6 +1408,7 @@ class MainController(QtGui.QMainWindow):
         resultObj = self.resultObj#finConn(uiObj)
         
         dictbeamdata  = self.fetchBeamPara()
+        print dictbeamdata
         fillet_length = resultObj['Plate']['height']
         fillet_thickness =  resultObj['Weld']['thickness']
         plate_width = resultObj['Plate']['width']
@@ -1438,6 +1429,7 @@ class MainController(QtGui.QMainWindow):
         
         ##### COLUMN PARAMETERS ######
         dictcoldata = self.fetchColumnPara()
+        print dictcoldata
         
         column_D = int(dictcoldata[QString("D")])
         column_B = int(dictcoldata[QString("B")])
@@ -1491,6 +1483,23 @@ class MainController(QtGui.QMainWindow):
         colflangeconn.create_3dmodel()
         return colflangeconn
         
+    def call_Fin3DModel(self,flag):
+        
+        dictbeamdata  = self.fetchBeamPara()
+        dictcoldata = self.fetchColumnPara()
+        commoLogicConn = CommonDesignLogic()
+        #self.connectivity = commLogicConn.create3DColWebBeamWeb()
+        loc = self.ui.comboConnLoc.currentText()
+        self.ui.btn3D.setChecked(QtCore.Qt.Checked)
+        if self.ui.btn3D.isChecked():
+            self.ui.chkBxBeam.setChecked(QtCore.Qt.Unchecked)
+            self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
+            self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
+            self.ui.mytabWidget.setCurrentIndex(0)
+        if flag == True:
+            commoLogicConn.call_3DModel(self.dispay,component="Model",loc,self.uiObj,self.resultObj,dictbeamdata,dictcoldata)
+            #self,display,component,loc,uiInputs,resultInputs,dictbeamdata,dictcoldata
+        
     
     def call_3DModel(self,flag): 
         #self.ui.btnSvgSave.setEnabled(True)
@@ -1500,7 +1509,7 @@ class MainController(QtGui.QMainWindow):
             self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
             self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
             self.ui.mytabWidget.setCurrentIndex(0)
-            
+        
         if flag == True:
             if self.ui.comboConnLoc.currentText()== "Column web-Beam web":    
                 #self.create3DColWebBeamWeb()
@@ -1581,6 +1590,25 @@ class MainController(QtGui.QMainWindow):
     def design_btnclicked(self):
         '''
         '''
+        #=======================================================================
+        # self.validateInputsOnDesignBtn()
+        # self.ui.outputDock.setFixedSize(310,710)
+        # self.enableViewButtons()
+        # self. unchecked_allChkBox()
+        # commLogicObj = CommonDesignLogic()
+        # self.uiObj = self.getuser_inputs()
+        # self.resultObj = commLogicOb.call_finCalculation(self.uiObj)
+        #     d = self.resultObj[self.resultObj.keys()[0]]
+        #     if len(str(d[d.keys()[0]])) == 0:
+        #         self.ui.btn_CreateDesign.setEnabled(False)
+        # self.display_output(self.resultObj)
+        # self.displaylog_totextedit()
+        # status = self.resultObj['Bolt']['status']
+
+        # self.call_Fin3DModel()
+        
+        #====================================================================
+        
         self.validateInputsOnDesignBtn()
         self.ui.outputDock.setFixedSize(310,710)
         self.enableViewButtons()
@@ -1605,7 +1633,8 @@ class MainController(QtGui.QMainWindow):
         status = self.resultObj['Bolt']['status']
         self.call_3DModel(status)
         
-       
+        
+        
         
     def create2Dcad(self,connectivity):
         ''' Returns the fuse model of finplate
@@ -1683,7 +1712,7 @@ class MainController(QtGui.QMainWindow):
              
     def call2D_Drawing(self,view):
         ''' This routine saves the 2D SVG image as per the connectivity selected
-        SVG image created through svgwrite pacage which takes design INPUT and OUTPUT parameters from Finplate GUI.
+        SVG image created through svgwrite package which takes design INPUT and OUTPUT parameters from Finplate GUI.
         '''
         if view == "All":
             fileName = ''
