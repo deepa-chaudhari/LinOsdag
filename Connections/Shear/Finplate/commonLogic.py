@@ -24,29 +24,43 @@ from OCC.Graphic3d import Graphic3d_NOT_2D_ALUMINUM
 
 class CommonDesignLogic(object):
     
+    def __init__(self,uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T,display): 
+                #self,self.uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T,display
+        self.uiObj = uiObj
+        self.dictbeamdata = dictbeamdata
+        self.dictcoldata = dictcoldata
+        self.loc = loc
+        self.component = component
+        self.bolt_R = bolt_R
+        self.bolt_T = bolt_T
+        self.bolt_Ht = bolt_Ht
+        self.nut_T = nut_T
+        self.display = display
+        self.resultObj = self.call_finCalculation()
+        self.connectivityObj = None
+        
+        pass
+      
+    
     ###### Fincalculation file
-    def call_finCalculation(self,Inputs):
-        outputs = finConn(Inputs)
+    def call_finCalculation(self):
+        outputs = finConn(self.uiObj)
         return outputs
         
-    def create3DBeamWebBeamWeb(self,uiObj,resultObj,dictbeamdata,dictcoldata):
-        '''
+    def create3DBeamWebBeamWeb(self):
+        '''self,uiObj,resultObj,dictbeamdata,dictcoldata):
         creating 3d cad model with beam web beam web
         
         '''
-        uiObj = self.uiObj
-        resultObj = self.resultObj
         
         ##### PRIMARY BEAM PARAMETERS #####
-        
-        dictbeamdata  = self.fetchColumnPara()
-        pBeam_D = int(dictbeamdata[QString("D")])
-        pBeam_B = int(dictbeamdata[QString("B")])
-        pBeam_tw = float(dictbeamdata[QString("tw")])
-        pBeam_T = float(dictbeamdata[QString("T")])
-        pBeam_alpha = float(dictbeamdata[QString("FlangeSlope")])
-        pBeam_R1 = float(dictbeamdata[QString("R1")])
-        pBeam_R2 = float(dictbeamdata[QString("R2")])
+        pBeam_D = int(self.dictbeamdata[QString("D")])
+        pBeam_B = int(self.dictbeamdata[QString("B")])
+        pBeam_tw = float(self.dictbeamdata[QString("tw")])
+        pBeam_T = float(self.dictbeamdata[QString("T")])
+        pBeam_alpha = float(self.dictbeamdata[QString("FlangeSlope")])
+        pBeam_R1 = float(self.dictbeamdata[QString("R1")])
+        pBeam_R2 = float(self.dictbeamdata[QString("R2")])
         pBeam_length = 800.0 # This parameter as per view of 3D cad model
         
         #beam = ISectionold(B = 140, T = 16,D = 400,t = 8.9, R1 = 14, R2 = 7, alpha = 98,length = 500)
@@ -75,11 +89,11 @@ class CommonDesignLogic(object):
         
         #### WELD,PLATE,BOLT AND NUT PARAMETERS #####
         
-        fillet_length = resultObj['Plate']['height']
-        fillet_thickness =  resultObj['Weld']['thickness']
-        plate_width = resultObj['Plate']['width']
-        plate_thick = uiObj['Plate']['Thickness (mm)']
-        bolt_dia = uiObj["Bolt"]["Diameter (mm)"]
+        fillet_length = self.resultObj['Plate']['height']
+        fillet_thickness =  self.resultObj['Weld']['thickness']
+        plate_width = self.resultObj['Plate']['width']
+        plate_thick = self.uiObj['Plate']['Thickness (mm)']
+        bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
         bolt_r = bolt_dia/2
         bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
         nut_R = bolt_R
@@ -103,29 +117,29 @@ class CommonDesignLogic(object):
         
         gap = sBeam_tw + plate_thick + nut_T
         
-        nutBoltArray = NutBoltArray(resultObj,nut,bolt,gap)
+        nutBoltArray = NutBoltArray(self.  resultObj,nut,bolt,gap)
         beamwebconn =  BeamWebBeamWeb(column,beam,notchObj,plate,Fweld1,nutBoltArray)
         beamwebconn.create_3dmodel()
         
         return  beamwebconn
        
-    def create3DColWebBeamWeb(self,uiObj,resultObj,dictbeamdata,dictcoldata):
+    def create3DColWebBeamWeb(self):
         '''
         creating 3d cad model with column web beam web
         
         '''
-        uiObj = self.uiObj
-        resultObj = self.resultObj
+        #uiObj = self.uiObj
+        #resultObj = self.resultObj
         
-        dictbeamdata  = self.fetchBeamPara()
+        #self.dictbeamdata  = self.fetchBeamPara()
         ##### BEAM PARAMETERS #####
-        beam_D = int(dictbeamdata[QString("D")])
-        beam_B = int(dictbeamdata[QString("B")])
-        beam_tw = float(dictbeamdata[QString("tw")])
-        beam_T = float(dictbeamdata[QString("T")])
-        beam_alpha = float(dictbeamdata[QString("FlangeSlope")])
-        beam_R1 = float(dictbeamdata[QString("R1")])
-        beam_R2 = float(dictbeamdata[QString("R2")])
+        beam_D = int(self.dictbeamdata[QString("D")])
+        beam_B = int(self.dictbeamdata[QString("B")])
+        beam_tw = float(self.dictbeamdata[QString("tw")])
+        beam_T = float(self.dictbeamdata[QString("T")])
+        beam_alpha = float(self.dictbeamdata[QString("FlangeSlope")])
+        beam_R1 = float(self.dictbeamdata[QString("R1")])
+        beam_R2 = float(self.dictbeamdata[QString("R2")])
         beam_length = 500.0 # This parameter as per view of 3D cad model
         
         #beam = ISectionold(B = 140, T = 16,D = 400,t = 8.9, R1 = 14, R2 = 7, alpha = 98,length = 500)
@@ -134,33 +148,37 @@ class CommonDesignLogic(object):
                         length = beam_length,notchObj = None)
         
         ##### COLUMN PARAMETERS ######
-        dictcoldata = self.fetchColumnPara()
+        self.dictcoldata = self.fetchColumnPara()
         
-        column_D = int(dictcoldata[QString("D")])
-        column_B = int(dictcoldata[QString("B")])
-        column_tw = float(dictcoldata[QString("tw")])
-        column_T = float(dictcoldata[QString("T")])
-        column_alpha = float(dictcoldata[QString("FlangeSlope")])
-        column_R1 = float(dictcoldata[QString("R1")])
-        column_R2 = float(dictcoldata[QString("R2")])
+        column_D = int(self.dictcoldata[QString("D")])
+        column_B = int(self.dictcoldata[QString("B")])
+        column_tw = float(self.dictcoldata[QString("tw")])
+        column_T = float(self.dictcoldata[QString("T")])
+        column_alpha = float(self.dictcoldata[QString("FlangeSlope")])
+        column_R1 = float(self.dictcoldata[QString("R1")])
+        column_R2 = float(self.dictcoldata[QString("R2")])
         
         #column = ISectionold(B = 83, T = 14.1, D = 250, t = 11, R1 = 12, R2 = 3.2, alpha = 98, length = 1000)
         column = ISection(B = column_B, T = column_T, D = column_D,
                            t = column_tw, R1 = column_R1, R2 = column_R2, alpha = column_alpha, length = 1000,notchObj = None)
         #### WELD,PLATE,BOLT AND NUT PARAMETERS #####
         
-        fillet_length = resultObj['Plate']['height']
-        fillet_thickness =  resultObj['Weld']['thickness']
-        plate_width = resultObj['Plate']['width']
-        plate_thick = uiObj['Plate']['Thickness (mm)']
-        bolt_dia = uiObj["Bolt"]["Diameter (mm)"]
+        fillet_length = self.resultObj['Plate']['height']
+        fillet_thickness =  self.resultObj['Weld']['thickness']
+        plate_width = self.resultObj['Plate']['width']
+        plate_thick = self.uiObj['Plate']['Thickness (mm)']
+        bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
         bolt_r = bolt_dia/2
-        bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        #bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        bolt_R = self.bolt_R
         nut_R = bolt_R
-        bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
-        bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        #bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
+        bolt_T = self.bolt_T
+        #bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        bolt_Ht = self.bolt_Ht
         #bolt_Ht = 50.0 # minimum bolt length as per Indian Standard IS 3757(1989)
-        nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        #nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        nut_T = self.nut_T
         nut_Ht = 12.2 #150
         
         #plate = Plate(L= 300,W =100, T = 10)
@@ -176,35 +194,33 @@ class CommonDesignLogic(object):
         
         gap = beam_tw + plate_thick+ nut_T
         
-        nutBoltArray = NutBoltArray(resultObj,nut,bolt,gap)
+        nutBoltArray = NutBoltArray(self.resultObj,nut,bolt,gap)
         
         colwebconn =  ColWebBeamWeb(column,beam,Fweld1,plate,nutBoltArray)
         colwebconn.create_3dmodel()
         
         return  colwebconn
         
-    def create3DColFlangeBeamWeb(self,uiObj,resultObj,dictbeamdata,dictcoldata):
+    def create3DColFlangeBeamWeb(self):
         '''
         Creating 3d cad model with column flange beam web connection
         
         '''
-        uiObj = self.uiObj#self.getuser_inputs()
-        resultObj = self.resultObj#finConn(uiObj)
-        
-        dictbeamdata  = self.fetchBeamPara()
-        print dictbeamdata
-        fillet_length = resultObj['Plate']['height']
-        fillet_thickness =  resultObj['Weld']['thickness']
-        plate_width = resultObj['Plate']['width']
-        plate_thick = uiObj['Plate']['Thickness (mm)']
+        #self.dictbeamdata  = self.fetchBeamPara()
+        #print self.dictbeamdata
+        #self.resultObj = self.call_finCalculation()
+        fillet_length = self.resultObj['Plate']['height']
+        fillet_thickness =  self.resultObj['Weld']['thickness']
+        plate_width = self.resultObj['Plate']['width']
+        plate_thick = self.uiObj['Plate']['Thickness (mm)']
         ##### BEAM PARAMETERS #####
-        beam_D = int(dictbeamdata[QString("D")])
-        beam_B = int(dictbeamdata[QString("B")])
-        beam_tw = float(dictbeamdata[QString("tw")])
-        beam_T = float(dictbeamdata[QString("T")])
-        beam_alpha = float(dictbeamdata[QString("FlangeSlope")])
-        beam_R1 = float(dictbeamdata[QString("R1")])
-        beam_R2 = float(dictbeamdata[QString("R2")])
+        beam_D = int(self.dictbeamdata[QString("D")])
+        beam_B = int(self.dictbeamdata[QString("B")])
+        beam_tw = float(self.dictbeamdata[QString("tw")])
+        beam_T = float(self.dictbeamdata[QString("T")])
+        beam_alpha = float(self.dictbeamdata[QString("FlangeSlope")])
+        beam_R1 = float(self.dictbeamdata[QString("R1")])
+        beam_R2 = float(self.dictbeamdata[QString("R2")])
         beam_length = 500.0 # This parameter as per view of 3D cad model
         
         #beam = ISectionold(B = 140, T = 16,D = 400,t = 8.9, R1 = 14, R2 = 7, alpha = 98,length = 500)
@@ -212,16 +228,14 @@ class CommonDesignLogic(object):
                         R1 = beam_R1, R2 = beam_R2, alpha = beam_alpha,length = beam_length, notchObj = None)
         
         ##### COLUMN PARAMETERS ######
-        dictcoldata = self.fetchColumnPara()
-        print dictcoldata
         
-        column_D = int(dictcoldata[QString("D")])
-        column_B = int(dictcoldata[QString("B")])
-        column_tw = float(dictcoldata[QString("tw")])
-        column_T = float(dictcoldata[QString("T")])
-        column_alpha = float(dictcoldata[QString("FlangeSlope")])
-        column_R1 = float(dictcoldata[QString("R1")])
-        column_R2 = float(dictcoldata[QString("R2")])
+        column_D = int(self.dictcoldata[QString("D")])
+        column_B = int(self.dictcoldata[QString("B")])
+        column_tw = float(self.dictcoldata[QString("tw")])
+        column_T = float(self.dictcoldata[QString("T")])
+        column_alpha = float(self.dictcoldata[QString("FlangeSlope")])
+        column_R1 = float(self.dictcoldata[QString("R1")])
+        column_R2 = float(self.dictcoldata[QString("R2")])
         
         #column = ISectionold(B = 83, T = 14.1, D = 250, t = 11, R1 = 12, R2 = 3.2, alpha = 98, length = 1000)
         column = ISection(B = column_B, T = column_T, D = column_D,
@@ -229,20 +243,24 @@ class CommonDesignLogic(object):
         
         #### WELD,PLATE,BOLT AND NUT PARAMETERS #####
         
-        fillet_length = resultObj['Plate']['height']
-        fillet_thickness =  resultObj['Weld']['thickness']
-        plate_width = resultObj['Plate']['width']
-        plate_thick = uiObj['Plate']['Thickness (mm)']
-        bolt_dia = uiObj["Bolt"]["Diameter (mm)"]
+        fillet_length = self.resultObj['Plate']['height']
+        fillet_thickness =  self.resultObj['Weld']['thickness']
+        plate_width = self.resultObj['Plate']['width']
+        plate_thick = self.uiObj['Plate']['Thickness (mm)']
+        bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
         bolt_r = bolt_dia/2
-        bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        #bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        bolt_R = self.bolt_R
         #bolt_R = bolt_r + 7
         nut_R = bolt_R
-        bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
+        #bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
+        bolt_T = self.bolt_T
         #bolt_T = 10.0 # minimum bolt thickness As per Indian Standard
-        bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        #bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        bolt_Ht = self.bolt_Ht
         # bolt_Ht =100.0 # minimum bolt length as per Indian Standard
-        nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        #nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        nut_T = self.nut_T
         #nut_T = 12.0 # minimum nut thickness As per Indian Standard
         nut_Ht = 12.2 #
         
@@ -261,64 +279,68 @@ class CommonDesignLogic(object):
         
         gap = beam_tw + plate_thick+ nut_T
         
-        nutBoltArray = NutBoltArray(resultObj,nut,bolt,gap)
+        nutBoltArray = NutBoltArray(self.resultObj,nut,bolt,gap)
         
         colflangeconn =  ColFlangeBeamWeb(column,beam,Fweld1,plate,nutBoltArray)
         colflangeconn.create_3dmodel()
         return colflangeconn
     
-    def display_3DModel(self,loc,display,component):
+    def display_3DModel(self):
         
-        display.EraseAll()
+        self.display.EraseAll()
         
-        display.SetModeShaded()
+        self.display.SetModeShaded()
         
-        display.DisableAntiAliasing()
+        self.display.DisableAntiAliasing()
         
         #self.display.set_bg_gradient_color(23,1,32,150,150,170)
         self.display.set_bg_gradient_color(51,51,102,150,150,170)
         
-        if loc == "Column flange-Beam web":
+        if self.loc == "Column flange-Beam web":
             self.display.View.SetProj(OCC.V3d.V3d_XnegYnegZpos)
         else:
             self.display.View_Iso()
             self.display.FitAll()
      
-        if component == "Column":
-            osdagDisplayShape(self.display, self.connectivity.columnModel, update=True)
-        elif component == "Beam":
-            osdagDisplayShape(self.display, self.connectivity.get_beamModel(), material = Graphic3d_NOT_2D_ALUMINUM, update=True)
-        elif component == "Finplate" :
-            osdagDisplayShape(self.display, self.connectivity.weldModelLeft, color = 'red', update = True)
-            osdagDisplayShape(self.display, self.connectivity.weldModelRight, color = 'red', update = True)
-            osdagDisplayShape(self.display,self.connectivity.plateModel,color = 'blue', update = True)
-            nutboltlist = self.connectivity.nutBoltArray.getModels()
+        if self.component == "Column":
+            osdagDisplayShape(self.display, self.connectivityObj.columnModel, update=True)
+        elif self.component == "Beam":
+            osdagDisplayShape(self.display, self.connectivityObj.get_beamModel(), material = Graphic3d_NOT_2D_ALUMINUM, update=True)
+        elif self. component == "Finplate" :
+            osdagDisplayShape(self.display, self.connectivityObj.weldModelLeft, color = 'red', update = True)
+            osdagDisplayShape(self.display, self.connectivityObj.weldModelRight, color = 'red', update = True)
+            osdagDisplayShape(self.display,self.connectivityObj.plateModel,color = 'blue', update = True)
+            nutboltlist = self.connectivityObj.nutBoltArray.getModels()
             for nutbolt in nutboltlist:
                 osdagDisplayShape(self.display,nutbolt,color = Quantity_NOC_SADDLEBROWN,update = True)
-        elif component == "Model":
-            osdagDisplayShape(self.display, self.connectivity.columnModel, update=True)
-            osdagDisplayShape(self.display, self.connectivity.beamModel, material = Graphic3d_NOT_2D_ALUMINUM, update=True)
-            osdagDisplayShape(self.display, self.connectivity.weldModelLeft, color = 'red', update = True)
-            osdagDisplayShape(self.display, self.connectivity.weldModelRight, color = 'red', update = True)
-            osdagDisplayShape(self.display,self.connectivity.plateModel,color = 'blue', update = True)
-            nutboltlist = self.connectivity.nutBoltArray.getModels()
+        elif self.component == "Model":
+            osdagDisplayShape(self.display, self.connectivityObj.columnModel, update=True)
+            osdagDisplayShape(self.display, self.connectivityObj.beamModel, material = Graphic3d_NOT_2D_ALUMINUM, update=True)
+            osdagDisplayShape(self.display, self.connectivityObj.weldModelLeft, color = 'red', update = True)
+            osdagDisplayShape(self.display, self.connectivityObj.weldModelRight, color = 'red', update = True)
+            osdagDisplayShape(self.display,self.connectivityObj.plateModel,color = 'blue', update = True)
+            nutboltlist = self.connectivityObj.nutBoltArray.getModels()
             for nutbolt in nutboltlist:
                 osdagDisplayShape(self.display,nutbolt,color = Quantity_NOC_SADDLEBROWN,update = True)
 
     
-    def call_3DModel(self,display,component,loc,uiInputs,resultInputs,dictbeamdata,dictcoldata):
+    def call_3DModel(self,flag):
         
-        if loc == "Column web-Beam web":
-            self.connectivityObj = self.create3DColWebBeamWeb(loc,uiInputs,resultInputs,dictbeamdata,dictcoldata)
-        elif loc =="Column flange-Beam web":
-            self.connectivityObj = self.create3DColFlangeBeamWeb(loc,uiInputs,resultInputs,dictbeamdata,dictcoldata)
-        else:
-            self.connectivityObj = self.create3DBeamWebBeamWeb(loc,uiInputs,resultInputs,dictbeamdata,dictcoldata)
+        if flag == True:
+            if self.loc == "Column web-Beam web":
+                self.connectivityObj = self.create3DColWebBeamWeb()
+            elif self.loc =="Column flange-Beam web":
+                self.connectivityObj = self.create3DColFlangeBeamWeb()
+            else:
+                self.connectivityObj = self.create3DBeamWebBeamWeb()
+                
+            self.display_3DModel()
             
-        self.display3Dmodel(loc,display,component)
+        else:
+            self.display.EraseAll()
         
-    def call_saveOutputs(self,inputs):
-        return self.call_finCalculation(inputs)
+    def call_saveOutputs(self):
+        return self.call_finCalculation(self.uiObj)
     
     def call_designReport(self):
         #save_design()
@@ -326,7 +348,7 @@ class CommonDesignLogic(object):
     
 #     def call_2Ddrawing(self,view):
 #         #call2D_Drawing()
-#         finCommonObj = FinCommonData(uiObj,resultObj,dictbeamdata,dictcoldata)
+#         finCommonObj = FinCommonData(self.uiObj,self.resultObj,dictbeamdata,self.dictcoldata)
 #         finCommonObj.saveToSvg(str(fileName),view)
 #         pass
     

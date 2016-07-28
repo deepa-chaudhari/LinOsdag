@@ -1497,7 +1497,8 @@ class MainController(QtGui.QMainWindow):
             self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
             self.ui.mytabWidget.setCurrentIndex(0)
         if flag == True:
-            commoLogicConn.call_3DModel(self.dispay,component="Model",loc,self.uiObj,self.resultObj,dictbeamdata,dictcoldata)
+            component = "Model"
+            commoLogicConn.call_3DModel(self.dispay,component,loc,self.uiObj,self.resultObj,dictbeamdata,dictcoldata)
             #self,display,component,loc,uiInputs,resultInputs,dictbeamdata,dictcoldata
         
     
@@ -1591,50 +1592,62 @@ class MainController(QtGui.QMainWindow):
         '''
         '''
         #=======================================================================
-        # self.validateInputsOnDesignBtn()
-        # self.ui.outputDock.setFixedSize(310,710)
-        # self.enableViewButtons()
-        # self. unchecked_allChkBox()
-        # commLogicObj = CommonDesignLogic()
-        # self.uiObj = self.getuser_inputs()
-        # self.resultObj = commLogicOb.call_finCalculation(self.uiObj)
-        #     d = self.resultObj[self.resultObj.keys()[0]]
-        #     if len(str(d[d.keys()[0]])) == 0:
-        #         self.ui.btn_CreateDesign.setEnabled(False)
-        # self.display_output(self.resultObj)
-        # self.displaylog_totextedit()
-        # status = self.resultObj['Bolt']['status']
-
-        # self.call_Fin3DModel()
-        
-        #====================================================================
-        
         self.validateInputsOnDesignBtn()
         self.ui.outputDock.setFixedSize(310,710)
         self.enableViewButtons()
         self. unchecked_allChkBox()
-        
-        # Getting User Inputs.
+         
         self.uiObj = self.getuser_inputs()
+        dictbeamdata  = self.fetchBeamPara()
+        dictcoldata = self.fetchColumnPara()
+        loc = self.ui.comboConnLoc.currentText() 
+        component = "Model"
+        bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
+        bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        bolt_T = self.boltHeadThick_Calculation(bolt_dia)  
+        bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+
+        commLogicObj = CommonDesignLogic(self.uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T,self.display) 
         
-        # FinPlate Design Calculations. 
-        self.resultObj = finConn(self.uiObj)
+        self.resultObj = commLogicObj.call_finCalculation()
         d = self.resultObj[self.resultObj.keys()[0]]
         if len(str(d[d.keys()[0]])) == 0:
             self.ui.btn_CreateDesign.setEnabled(False)
-        
-        # Displaying Design Calculations To Output Window
         self.display_output(self.resultObj)
-        
-        # Displaying Messages related to FinPlate Design.
         self.displaylog_totextedit()
-
-        # Displaying 3D Cad model
         status = self.resultObj['Bolt']['status']
-        self.call_3DModel(status)
+
+        commLogicObj.call_3DModel(status)
+        
+        #====================================================================
+        
+        # self.validateInputsOnDesignBtn()
+        # self.ui.outputDock.setFixedSize(310,710)
+        # self.enableViewButtons()
+        # self. unchecked_allChkBox()
+        # 
+        # # Getting User Inputs.
+        # self.uiObj = self.getuser_inputs()
+        # 
+        # # FinPlate Design Calculations. 
+        # self.resultObj = finConn(self.uiObj)
+        # d = self.resultObj[self.resultObj.keys()[0]]
+        # if len(str(d[d.keys()[0]])) == 0:
+        #     self.ui.btn_CreateDesign.setEnabled(False)
+        # 
+        # # Displaying Design Calculations To Output Window
+        # self.display_output(self.resultObj)
+        # 
+        # # Displaying Messages related to FinPlate Design.
+        # self.displaylog_totextedit()
+        # 
+        # # Displaying 3D Cad model
+        # status = self.resultObj['Bolt']['status']
+        # self.call_3DModel(status)
         
         
-        
+        #====================================================================
         
     def create2Dcad(self,connectivity):
         ''' Returns the fuse model of finplate
