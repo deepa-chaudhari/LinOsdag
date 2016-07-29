@@ -2034,6 +2034,10 @@ class Ui_MainWindow(object):
         self.actionShow_all.setShortcut(_translate("MainWindow", "Alt+Shift+M", None))
         self.actionLoad_Input.setText(_translate("MainWindow", "Load Input", None))
         self.actionLoad_Input.setShortcut(_translate("MainWindow", "Ctrl+L", None))
+        
+        #shortcut for design
+        self.btn_Design.setShortcut(_translate("MainWindow", "Alt+D", None))
+        self.btn_Reset.setShortcut(_translate("MainWindow", "Alt+R", None))
 
 import icons_rc
 

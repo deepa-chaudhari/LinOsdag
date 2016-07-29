@@ -3,6 +3,7 @@ Created on 14-Jul-2016
 
 @author: deepa
 '''
+import os
 from PyQt4.QtCore import QString
 from colWebBeamWebConnectivity import ColWebBeamWeb
 from beamWebBeamWebConnectivity import BeamWebBeamWeb
@@ -21,6 +22,7 @@ from utilities import osdagDisplayShape
 import OCC.V3d
 from OCC.Quantity import Quantity_NOC_SADDLEBROWN
 from OCC.Graphic3d import Graphic3d_NOT_2D_ALUMINUM
+from Connections.Shear.Finplate.drawing_2D import FinCommonData
 
 class CommonDesignLogic(object):
     
@@ -54,13 +56,13 @@ class CommonDesignLogic(object):
         '''
         
         ##### PRIMARY BEAM PARAMETERS #####
-        pBeam_D = int(self.dictbeamdata[QString("D")])
-        pBeam_B = int(self.dictbeamdata[QString("B")])
-        pBeam_tw = float(self.dictbeamdata[QString("tw")])
-        pBeam_T = float(self.dictbeamdata[QString("T")])
-        pBeam_alpha = float(self.dictbeamdata[QString("FlangeSlope")])
-        pBeam_R1 = float(self.dictbeamdata[QString("R1")])
-        pBeam_R2 = float(self.dictbeamdata[QString("R2")])
+        pBeam_D = int(self.dictcoldata[QString("D")])
+        pBeam_B = int(self.dictcoldata[QString("B")])
+        pBeam_tw = float(self.dictcoldata[QString("tw")])
+        pBeam_T = float(self.dictcoldata[QString("T")])
+        pBeam_alpha = float(self.dictcoldata[QString("FlangeSlope")])
+        pBeam_R1 = float(self.dictcoldata[QString("R1")])
+        pBeam_R2 = float(self.dictcoldata[QString("R2")])
         pBeam_length = 800.0 # This parameter as per view of 3D cad model
         
         #beam = ISectionold(B = 140, T = 16,D = 400,t = 8.9, R1 = 14, R2 = 7, alpha = 98,length = 500)
@@ -69,15 +71,15 @@ class CommonDesignLogic(object):
                         length = pBeam_length,notchObj = None)
         
         ##### SECONDARY BEAM PARAMETERS ######
-        dictbeamdata2 = self.fetchBeamPara()
+        #dictbeamdata2 = self.fetchBeamPara()
         
-        sBeam_D = int(dictbeamdata2[QString("D")])
-        sBeam_B = int(dictbeamdata2[QString("B")])
-        sBeam_tw = float(dictbeamdata2[QString("tw")])
-        sBeam_T = float(dictbeamdata2[QString("T")])
-        sBeam_alpha = float(dictbeamdata2[QString("FlangeSlope")])
-        sBeam_R1 = float(dictbeamdata2[QString("R1")])
-        sBeam_R2 = float(dictbeamdata2[QString("R2")])
+        sBeam_D = int(self.dictbeamdata[QString("D")])
+        sBeam_B = int(self.dictbeamdata[QString("B")])
+        sBeam_tw = float(self.dictbeamdata[QString("tw")])
+        sBeam_T = float(self.dictbeamdata[QString("T")])
+        sBeam_alpha = float(self.dictbeamdata[QString("FlangeSlope")])
+        sBeam_R1 = float(self.dictbeamdata[QString("R1")])
+        sBeam_R2 = float(self.dictbeamdata[QString("R2")])
         
         #--Notch dimensions
         notchObj = Notch(R1 = pBeam_R1, height = (pBeam_T + pBeam_R1), width= ((pBeam_B -(pBeam_tw + 40))/2.0 + 10),length = sBeam_B )
@@ -95,12 +97,16 @@ class CommonDesignLogic(object):
         plate_thick = self.uiObj['Plate']['Thickness (mm)']
         bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
         bolt_r = bolt_dia/2
-        bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        #bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
+        bolt_R = self.bolt_R
         nut_R = bolt_R
-        bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
-        bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        #bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
+        bolt_T = self.bolt_T
+        #bolt_Ht = self.boltLength_Calculation(bolt_dia)
+        bolt_Ht = self.bolt_Ht
         #bolt_Ht = 50.0 # minimum bolt length as per Indian Standard IS 3757(1989)
-        nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        #nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        nut_T = self.nut_T
         nut_Ht = 12.2 #150
         
         #plate = Plate(L= 300,W =100, T = 10)
@@ -148,7 +154,7 @@ class CommonDesignLogic(object):
                         length = beam_length,notchObj = None)
         
         ##### COLUMN PARAMETERS ######
-        self.dictcoldata = self.fetchColumnPara()
+        #self.dictcoldata = self.fetchColumnPara()
         
         column_D = int(self.dictcoldata[QString("D")])
         column_B = int(self.dictcoldata[QString("B")])
@@ -324,13 +330,16 @@ class CommonDesignLogic(object):
                 osdagDisplayShape(self.display,nutbolt,color = Quantity_NOC_SADDLEBROWN,update = True)
 
     
-    def call_3DModel(self,flag):
+    def call_3DModel(self,flag):#Done
         
         if flag == True:
+            
             if self.loc == "Column web-Beam web":
                 self.connectivityObj = self.create3DColWebBeamWeb()
+                
             elif self.loc =="Column flange-Beam web":
                 self.connectivityObj = self.create3DColFlangeBeamWeb()
+                
             else:
                 self.connectivityObj = self.create3DBeamWebBeamWeb()
                 
@@ -339,11 +348,55 @@ class CommonDesignLogic(object):
         else:
             self.display.EraseAll()
         
-    def call_saveOutputs(self):
+    def call_saveOutputs(self): #Done
+        
         return self.call_finCalculation(self.uiObj)
     
-    def call_designReport(self):
+    def call2D_Drawing(self,view):
+        if view == "All":
+            fileName = ''
+            self.callDesired_View(fileName, view)
+            
+            self.display.set_bg_gradient_color(255,255,255,255,255,255)
+            self.display.ExportToImage('output/finplate/Report/3D_Model.png')
+            
+    # else:
+    #     
+    #     fileName = QtGui.QFileDialog.getSaveFileName(self,
+    #             "Save SVG", 'output/finplate/2DImages/untitled.svg',
+    #             "SVG files (*.svg)") #untitle
+    #     f = open(fileName,'w')
+    #     
+    #     self.callDesired_View(fileName, view)
+    #    
+    #     f.close()
+        pass
+    def save2D_Drawing(self,fname):
+        fName = str(fname)
+        
+        
+        
+    def callDesired_View(self,filename,view):
+        finCommonObj = FinCommonData(self.uiObj,self.resultObj,self.dictbeamdata,self.dictcoldata)
+        finCommonObj.saveToSvg(str(filename),view)
+    
+    
+    def call_designReport(self,htmlfilename,profileSummary,view):
         #save_design()
+        # fileName,pat =QtGui.QFileDialog.getSaveFileNameAndFilter(self,"Save File As","output/finplate/Report","Html Files (*.html)")
+        # fileName = str(fileName)
+        # self.call2D_Drawing("All")
+        # self.inputdict = self.uiObj#self.getuser_inputs()
+        # self.outdict = self.resultObj#self.outputdict()
+        # 
+        # dictBeamData  = self.fetchBeamPara()
+        # dictColData  = self.fetchColumnPara()
+        # save_html(self.outdict, self.inputdict, dictBeamData, dictColData,popup_summary,fileName)
+        fileName = str(htmlfilename)
+        if os.path.isfile(fileName):
+            self.call2D_Drawing(view)
+        
+        
         pass
     
 #     def call_2Ddrawing(self,view):
@@ -352,13 +405,11 @@ class CommonDesignLogic(object):
 #         finCommonObj.saveToSvg(str(fileName),view)
 #         pass
     
-    def call_saveMessages(self):
+    def call_saveMessages(self): # Done
         
-        fileObj = open("Connections/Shear/Finplate/fin.log", "rb")
-        data = fileObj.read()
-        fileObj.close()
+        fileName ="Connections/Shear/Finplate/fin.log"
         
-        return data
+        return fileName
     
                
     

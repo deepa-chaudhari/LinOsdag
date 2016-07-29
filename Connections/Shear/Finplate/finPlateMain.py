@@ -948,16 +948,16 @@ class MainController(QtGui.QMainWindow):
         self.ui.txtMomntCapacity.setText(str(moment_capacity))
     
    
-    def displaylog_totextedit(self):
+    def displaylog_totextedit(self,commLogicObj):
         '''
         This method displaying Design messages(log messages)to textedit widget.
         '''
-        
-        afile = QtCore.QFile('Connections/Shear/Finplate/fin.log')
-        
+        fname = str(commLogicObj.call_saveMessages())
+        afile = QtCore.QFile(fname)
+         
         if not afile.open(QtCore.QIODevice.ReadOnly):#ReadOnly
             QtGui.QMessageBox.information(None, 'info', afile.errorString())
-        
+         
         stream = QtCore.QTextStream(afile)
         self.ui.textEdit.clear()
         self.ui.textEdit.setHtml(stream.readAll())
@@ -1615,7 +1615,7 @@ class MainController(QtGui.QMainWindow):
         if len(str(d[d.keys()[0]])) == 0:
             self.ui.btn_CreateDesign.setEnabled(False)
         self.display_output(self.resultObj)
-        self.displaylog_totextedit()
+        self.displaylog_totextedit(commLogicObj)
         status = self.resultObj['Bolt']['status']
 
         commLogicObj.call_3DModel(status)
