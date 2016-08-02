@@ -182,9 +182,9 @@ class MainController(QtGui.QMainWindow):
         ##### MenuBar #####
         # File Menu
        
-        self.ui.actionSave_Front_View.triggered.connect(lambda:self.call2D_Drawing("Front"))
-        self.ui.actionSave_Side_View.triggered.connect(lambda:self.call2D_Drawing("Side"))
-        self.ui.actionSave_Top_View.triggered.connect(lambda:self.call2D_Drawing("Top"))
+        self.ui.actionSave_Front_View.triggered.connect(lambda:self.callFin2D_Drawing("Front"))
+        self.ui.actionSave_Side_View.triggered.connect(lambda:self.callFin2D_Drawing("Side"))
+        self.ui.actionSave_Top_View.triggered.connect(lambda:self.callFin2D_Drawing("Top"))
         self.ui.actionQuit_fin_plate_design.setShortcut('Ctrl+Q')
         self.ui.actionQuit_fin_plate_design.setStatusTip('Exit application')
         self.ui.actionQuit_fin_plate_design.triggered.connect(QtGui.qApp.quit)
@@ -226,9 +226,9 @@ class MainController(QtGui.QMainWindow):
 #         self.ui.btnZmIn.clicked.connect(self.callZoomin)
 #         self.ui.btnZmOut.clicked.connect(self.callZoomout)
 #         self.ui.btnRotatCw.clicked.connect(self.callRotation)
-        self.ui.btnFront.clicked.connect(lambda:self.call2D_Drawing("Front"))
-        self.ui.btnSide.clicked.connect(lambda:self.call2D_Drawing("Side"))
-        self.ui.btnTop.clicked.connect(lambda:self.call2D_Drawing("Top"))
+        self.ui.btnFront.clicked.connect(lambda:self.callFin2D_Drawing("Front"))
+        self.ui.btnSide.clicked.connect(lambda:self.callFin2D_Drawing("Side"))
+        self.ui.btnTop.clicked.connect(lambda:self.callFin2D_Drawing("Top"))
         
         self.ui.btn_Reset.clicked.connect(self.resetbtn_clicked)
         
@@ -251,6 +251,7 @@ class MainController(QtGui.QMainWindow):
         self.disableViewButtons()
         self.resultObj = None
         self.uiObj = None
+        self.alist = None
     
     def fetchBeamPara(self):
         beam_sec = self.ui.combo_Beam.currentText()
@@ -459,6 +460,7 @@ class MainController(QtGui.QMainWindow):
 
     
     def retrieve_prevstate(self):
+        
         uiObj = self.get_prevstate()
         self.setDictToUserInputs(uiObj)
 #         if(uiObj != None):
@@ -716,7 +718,7 @@ class MainController(QtGui.QMainWindow):
         
         fileName,pat =QtGui.QFileDialog.getSaveFileNameAndFilter(self,"Save File As","output/finplate/Report","Html Files (*.html)")
         fileName = str(fileName)
-        self.call2D_Drawing("All")
+        self.callFin2D_Drawing("All")
         self.inputdict = self.uiObj#self.getuser_inputs()
         self.outdict = self.resultObj#self.outputdict()
         
@@ -1588,28 +1590,33 @@ class MainController(QtGui.QMainWindow):
         self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
         self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
         
-    def design_btnclicked(self):
-        '''
-        '''
-        #=======================================================================
-        self.validateInputsOnDesignBtn()
-        self.ui.outputDock.setFixedSize(310,710)
-        self.enableViewButtons()
-        self. unchecked_allChkBox()
-         
+    def designParameters(self):
         self.uiObj = self.getuser_inputs()
         dictbeamdata  = self.fetchBeamPara()
         dictcoldata = self.fetchColumnPara()
-        loc = self.ui.comboConnLoc.currentText() 
+        loc = str(self.ui.comboConnLoc.currentText())
         component = "Model"
         bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
         bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
         bolt_T = self.boltHeadThick_Calculation(bolt_dia)  
         bolt_Ht = self.boltLength_Calculation(bolt_dia)
         nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
+        return [self.uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T]
 
-        commLogicObj = CommonDesignLogic(self.uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T,self.display) 
         
+    
+    def design_btnclicked(self):
+        '''
+        '''
+        self.alist = self.designParameters()
+        
+        self.validateInputsOnDesignBtn()
+        self.ui.outputDock.setFixedSize(310,710)
+        self.enableViewButtons()
+        self. unchecked_allChkBox()
+        
+        commLogicObj = CommonDesignLogic(self.alist[0],self.alist[1],self.alist[2],self.alist[3],self.alist[4],self.alist[5],self.alist[6],self.alist[7],self.alist[8],self.display) 
+
         self.resultObj = commLogicObj.call_finCalculation()
         d = self.resultObj[self.resultObj.keys()[0]]
         if len(str(d[d.keys()[0]])) == 0:
@@ -1657,9 +1664,7 @@ class MainController(QtGui.QMainWindow):
         for model in cadlist[1:]:
             final_model = BRepAlgoAPI_Fuse(model,final_model).Shape()
         return final_model 
-     
     
-             
          
     # Export to IGS,STEP,STL,BREP
     
@@ -1723,27 +1728,44 @@ class MainController(QtGui.QMainWindow):
         else:
             pass
              
-    def call2D_Drawing(self,view):
+    def callFin2D_Drawing(self,view): # call2D_Drawing(self,view)
+        
         ''' This routine saves the 2D SVG image as per the connectivity selected
         SVG image created through svgwrite package which takes design INPUT and OUTPUT parameters from Finplate GUI.
         '''
-        if view == "All":
-            fileName = ''
-            self.callDesired_View(fileName, view)
-            
-            self.display.set_bg_gradient_color(255,255,255,255,255,255)
-            self.display.ExportToImage('output/finplate/Report/3D_Model.png')
-            
-        else:
-            
+        self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
+        self.ui.chkBxBeam.setChecked(QtCore.Qt.Unchecked)
+        self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
+        self.ui.btn3D.setChecked(QtCore.Qt.Unchecked)
+        
+        commLogicObj = CommonDesignLogic(self.alist[0],self.alist[1],self.alist[2],self.alist[3],self.alist[4],self.alist[5],self.alist[6],self.alist[7],self.alist[8],self.display) 
+        if view != 'All':
             fileName = QtGui.QFileDialog.getSaveFileName(self,
                     "Save SVG", 'output/finplate/2DImages/untitled.svg',
                     "SVG files (*.svg)")
-            f = open(fileName,'w')
+            fname = str(fileName)
+        else:
+            fname = ''
             
-            self.callDesired_View(fileName, view)
-           
-            f.close()
+        commLogicObj.call2D_Drawing(view,fname)
+        
+        # if view == "All":
+        #     fileName = ''
+        #     self.callDesired_View(fileName, view)
+        #     
+        #     self.display.set_bg_gradient_color(255,255,255,255,255,255)
+        #     self.display.ExportToImage('output/finplate/Report/3D_Model.png')
+        #     
+        # else:
+        #     
+        #     fileName = QtGui.QFileDialog.getSaveFileName(self,
+        #             "Save SVG", 'output/finplate/2DImages/untitled.svg',
+        #             "SVG files (*.svg)")
+        #     f = open(fileName,'w')
+        #     
+        #     self.callDesired_View(fileName, view)
+        #    
+        #     f.close()
         
     def callDesired_View(self,fileName,view):
         

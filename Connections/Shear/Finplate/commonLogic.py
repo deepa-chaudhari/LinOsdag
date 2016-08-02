@@ -352,31 +352,24 @@ class CommonDesignLogic(object):
         
         return self.call_finCalculation(self.uiObj)
     
-    def call2D_Drawing(self,view):
+    
+    def call2D_Drawing(self,view, filename): #DONE
+        
+        fname = str(filename)
+        
         if view == "All":
-            fileName = ''
-            self.callDesired_View(fileName, view)
-            
             self.display.set_bg_gradient_color(255,255,255,255,255,255)
             self.display.ExportToImage('output/finplate/Report/3D_Model.png')
             
-    # else:
-    #     
-    #     fileName = QtGui.QFileDialog.getSaveFileName(self,
-    #             "Save SVG", 'output/finplate/2DImages/untitled.svg',
-    #             "SVG files (*.svg)") #untitle
-    #     f = open(fileName,'w')
-    #     
-    #     self.callDesired_View(fileName, view)
-    #    
-    #     f.close()
-        pass
-    def save2D_Drawing(self,fname):
-        fName = str(fname)
-        
-        
+        else:
+            f = open(fname,'w')
+            f.close()
+            
+        self.callDesired_View(fname, view)
+    
         
     def callDesired_View(self,filename,view):
+        
         finCommonObj = FinCommonData(self.uiObj,self.resultObj,self.dictbeamdata,self.dictcoldata)
         finCommonObj.saveToSvg(str(filename),view)
     
