@@ -24,10 +24,12 @@ from OCC.Quantity import Quantity_NOC_SADDLEBROWN
 from OCC.Graphic3d import Graphic3d_NOT_2D_ALUMINUM
 from Connections.Shear.Finplate.drawing_2D import FinCommonData
 
+from reportGenerator import save_html
+
 class CommonDesignLogic(object):
     
-    def __init__(self,uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T,display): 
-                #self,self.uiObj,dictbeamdata,dictcoldata,loc,component,bolt_R,bolt_T,bolt_Ht,nut_T,display
+    def __init__(self, uiObj, dictbeamdata, dictcoldata, loc, component, bolt_R, bolt_T, bolt_Ht, nut_T, display): 
+                
         self.uiObj = uiObj
         self.dictbeamdata = dictbeamdata
         self.dictcoldata = dictcoldata
@@ -40,21 +42,20 @@ class CommonDesignLogic(object):
         self.display = display
         self.resultObj = self.call_finCalculation()
         self.connectivityObj = None
-        
-        pass
-      
     
-    ###### Fincalculation file
-    def call_finCalculation(self):
+    #============================= FinCalculation ===========================================
+    
+    def call_finCalculation(self):#Done
         outputs = finConn(self.uiObj)
         return outputs
-        
+    
+    #=========================================================================================
+
     def create3DBeamWebBeamWeb(self):
         '''self,uiObj,resultObj,dictbeamdata,dictcoldata):
         creating 3d cad model with beam web beam web
         
         '''
-        
         ##### PRIMARY BEAM PARAMETERS #####
         pBeam_D = int(self.dictcoldata[QString("D")])
         pBeam_B = int(self.dictcoldata[QString("B")])
@@ -71,7 +72,6 @@ class CommonDesignLogic(object):
                         length = pBeam_length,notchObj = None)
         
         ##### SECONDARY BEAM PARAMETERS ######
-        #dictbeamdata2 = self.fetchBeamPara()
         
         sBeam_D = int(self.dictbeamdata[QString("D")])
         sBeam_B = int(self.dictbeamdata[QString("B")])
@@ -97,15 +97,10 @@ class CommonDesignLogic(object):
         plate_thick = self.uiObj['Plate']['Thickness (mm)']
         bolt_dia = self.uiObj["Bolt"]["Diameter (mm)"]
         bolt_r = bolt_dia/2
-        #bolt_R = self.boltHeadDia_Calculation(bolt_dia) /2
         bolt_R = self.bolt_R
         nut_R = bolt_R
-        #bolt_T = self.boltHeadThick_Calculation(bolt_dia) 
         bolt_T = self.bolt_T
-        #bolt_Ht = self.boltLength_Calculation(bolt_dia)
         bolt_Ht = self.bolt_Ht
-        #bolt_Ht = 50.0 # minimum bolt length as per Indian Standard IS 3757(1989)
-        #nut_T = self.nutThick_Calculation(bolt_dia)# bolt_dia = nut_dia
         nut_T = self.nut_T
         nut_Ht = 12.2 #150
         
@@ -128,7 +123,9 @@ class CommonDesignLogic(object):
         beamwebconn.create_3dmodel()
         
         return  beamwebconn
-       
+    
+    #=========================================================================================
+    
     def create3DColWebBeamWeb(self):
         '''
         creating 3d cad model with column web beam web
@@ -206,7 +203,8 @@ class CommonDesignLogic(object):
         colwebconn.create_3dmodel()
         
         return  colwebconn
-        
+    #=========================================================================================
+    
     def create3DColFlangeBeamWeb(self):
         '''
         Creating 3d cad model with column flange beam web connection
@@ -290,7 +288,7 @@ class CommonDesignLogic(object):
         colflangeconn =  ColFlangeBeamWeb(column,beam,Fweld1,plate,nutBoltArray)
         colflangeconn.create_3dmodel()
         return colflangeconn
-    
+    #=========================================================================================
     def display_3DModel(self):
         
         self.display.EraseAll()
@@ -329,7 +327,7 @@ class CommonDesignLogic(object):
             for nutbolt in nutboltlist:
                 osdagDisplayShape(self.display,nutbolt,color = Quantity_NOC_SADDLEBROWN,update = True)
 
-    
+    #=========================================================================================
     def call_3DModel(self,flag):#Done
         
         if flag == True:
@@ -347,12 +345,12 @@ class CommonDesignLogic(object):
             
         else:
             self.display.EraseAll()
-        
+    #=========================================================================================
     def call_saveOutputs(self): #Done
         
         return self.call_finCalculation(self.uiObj)
     
-    
+    #=========================================================================================
     def call2D_Drawing(self,view, filename): #DONE
         
         fname = str(filename)
@@ -366,43 +364,30 @@ class CommonDesignLogic(object):
             f.close()
             
         self.callDesired_View(fname, view)
-    
+    #=========================================================================================
         
-    def callDesired_View(self,filename,view):
+    def callDesired_View(self,filename,view):# Done
         
         finCommonObj = FinCommonData(self.uiObj,self.resultObj,self.dictbeamdata,self.dictcoldata)
         finCommonObj.saveToSvg(str(filename),view)
-    
-    
-    def call_designReport(self,htmlfilename,profileSummary,view):
-        #save_design()
-        # fileName,pat =QtGui.QFileDialog.getSaveFileNameAndFilter(self,"Save File As","output/finplate/Report","Html Files (*.html)")
-        # fileName = str(fileName)
-        # self.call2D_Drawing("All")
-        # self.inputdict = self.uiObj#self.getuser_inputs()
-        # self.outdict = self.resultObj#self.outputdict()
-        # 
-        # dictBeamData  = self.fetchBeamPara()
-        # dictColData  = self.fetchColumnPara()
-        # save_html(self.outdict, self.inputdict, dictBeamData, dictColData,popup_summary,fileName)
-        fileName = str(htmlfilename)
-        if os.path.isfile(fileName):
-            self.call2D_Drawing(view)
-        
-        
-        pass
-    
-#     def call_2Ddrawing(self,view):
-#         #call2D_Drawing()
-#         finCommonObj = FinCommonData(self.uiObj,self.resultObj,dictbeamdata,self.dictcoldata)
-#         finCommonObj.saveToSvg(str(fileName),view)
-#         pass
-    
+    #========================================================================================= 
     def call_saveMessages(self): # Done
         
         fileName ="Connections/Shear/Finplate/fin.log"
         
         return fileName
+    
+    #=========================================================================================
+    def call_designReport(self,htmlfilename,profileSummary):
+        
+        fileName = str(htmlfilename)
+        if os.path.isfile(fileName):
+            print self.uiObj
+            save_html( self.resultObj,self.uiObj, self.dictbeamdata, self.dictcoldata,profileSummary,htmlfilename)
+        
+    #=========================================================================================   
+        
+    
     
                
     

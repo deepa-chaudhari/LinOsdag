@@ -39,7 +39,7 @@ from drawing_2D import FinCommonData
 from PyQt4.QtWebKit import *
 from PyQt4.Qt import QPrinter
 # Developed by deepa
-from reportGenerator import *
+from reportGenerator import save_html
 from ModelUtils import getGpPt
 ##### Testing imports
 import OCC.V3d
@@ -719,23 +719,24 @@ class MainController(QtGui.QMainWindow):
         fileName,pat =QtGui.QFileDialog.getSaveFileNameAndFilter(self,"Save File As","output/finplate/Report","Html Files (*.html)")
         fileName = str(fileName)
         self.callFin2D_Drawing("All")
-        self.inputdict = self.uiObj#self.getuser_inputs()
-        self.outdict = self.resultObj#self.outputdict()
-        
-        dictBeamData  = self.fetchBeamPara()
-        dictColData  = self.fetchColumnPara()
-        save_html(self.outdict, self.inputdict, dictBeamData, dictColData,popup_summary,fileName)
-        ext = os.path.basename(str(fileName))
-        base = ext[ :-5]
-        
-        path_wkthmltopdf = r'/home/deepa/Downloads/wkhtmltox/bin/wkhtmltopdf'
-        config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
-        options = {
-                    'margin-bottom': '10mm',
-                    'footer-right': '[page]'
-                    }
-        pdfkit.from_file(fileName, 'output/finplate/Report/finplaterepoRT.pdf', configuration=config, options=options)
-#         pdfkit.from_file(fileName,'output/finplate/'+base+'.pdf',configuration=config, options=options)
+        commLogicObj = CommonDesignLogic(self.alist[0],self.alist[1],self.alist[2],self.alist[3],self.alist[4],self.alist[5],self.alist[6],self.alist[7],self.alist[8],self.display) 
+        commLogicObj.call_designReport(fileName, popup_summary)
+        # self.inputdict = self.uiObj#self.getuser_inputs()
+        # self.outdict = self.resultObj#self.outputdict()
+        # 
+        # dictBeamData  = self.fetchBeamPara()
+        # save_html(self.outdict, self.inputdict, dictBeamData, dictColData,popup_summary,fileName)
+        # ext = os.path.basename(str(fileName))
+        # base = ext[ :-5]
+        #  
+        # path_wkthmltopdf = r'/home/deepa/Downloads/wkhtmltox/bin/wkhtmltopdf'
+        # config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
+        # options = {
+        #             'margin-bottom': '10mm',
+        #             'footer-right': '[page]'
+        #             }
+        # pdfkit.from_file(fileName, 'output/finplate/Report/finplaterepoRT.pdf', configuration=config, options=options)
+        # #         pdfkit.from_file(fileName,'output/finplate/'+base+'.pdf',configuration=config, options=options)
         
         
         QtGui.QMessageBox.about(self,'Information',"Report Saved")
@@ -1710,23 +1711,23 @@ class MainController(QtGui.QMainWindow):
         QtGui.QMessageBox.about(self,'Information',"File saved")
         
 
-    def display2DModelOriginal(self, final_model, viewName):
-        
-        self.display,_ = self.init_display()
-        self.display.EraseAll()      
-        #self.display.SetModeWireFrame()
-        
-        self.display.DisplayShape(final_model, update = True)
-        self.display.SetModeHLR()
-        
-        if (viewName == "Front"):
-            self.display.View_Front()
-        elif (viewName == "Top"):
-            self.display.View_Top()
-        elif (viewName == "Right"):
-            self.display.View_Right()
-        else:
-            pass
+    # def display2DModelOriginal(self, final_model, viewName):
+    #     
+    #     self.display,_ = self.init_display()
+    #     self.display.EraseAll()      
+    #     #self.display.SetModeWireFrame()
+    #     
+    #     self.display.DisplayShape(final_model, update = True)
+    #     self.display.SetModeHLR()
+    #     
+    #     if (viewName == "Front"):
+    #         self.display.View_Front()
+    #     elif (viewName == "Top"):
+    #         self.display.View_Top()
+    #     elif (viewName == "Right"):
+    #         self.display.View_Right()
+    #     else:
+    #         pass
              
     def callFin2D_Drawing(self,view): # call2D_Drawing(self,view)
         
@@ -1767,19 +1768,19 @@ class MainController(QtGui.QMainWindow):
         #    
         #     f.close()
         
-    def callDesired_View(self,fileName,view):
-        
-        self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
-        self.ui.chkBxBeam.setChecked(QtCore.Qt.Unchecked)
-        self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
-        self.ui.btn3D.setChecked(QtCore.Qt.Unchecked)
-        
-        uiObj = self.uiObj
-        resultObj = self.resultObj
-        dictbeamdata  = self.fetchBeamPara()
-        dictcoldata = self.fetchColumnPara()
-        finCommonObj = FinCommonData(uiObj,resultObj,dictbeamdata,dictcoldata)
-        finCommonObj.saveToSvg(str(fileName),view)
+    # def callDesired_View(self,fileName,view):
+    #     
+    #     self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
+    #     self.ui.chkBxBeam.setChecked(QtCore.Qt.Unchecked)
+    #     self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
+    #     self.ui.btn3D.setChecked(QtCore.Qt.Unchecked)
+    #     
+    #     uiObj = self.uiObj
+    #     resultObj = self.resultObj
+    #     dictbeamdata  = self.fetchBeamPara()
+    #     dictcoldata = self.fetchColumnPara()
+    #     finCommonObj = FinCommonData(uiObj,resultObj,dictbeamdata,dictcoldata)
+    #     finCommonObj.saveToSvg(str(fileName),view)
         
             
     def closeEvent(self, event):
