@@ -387,7 +387,8 @@ class CommonDesignLogic(object):
         
     #=========================================================================================   
         
-    
+    def laod_userProfile(self):
+        pass
     
                
     
