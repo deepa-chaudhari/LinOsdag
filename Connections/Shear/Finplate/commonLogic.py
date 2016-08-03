@@ -350,7 +350,11 @@ class CommonDesignLogic(object):
         
         return self.call_finCalculation(self.uiObj)
     
+<<<<<<< HEAD
     #=========================================================================================
+=======
+    
+>>>>>>> LinuxOsdag/master
     def call2D_Drawing(self,view, filename): #DONE
         
         fname = str(filename)
@@ -364,10 +368,17 @@ class CommonDesignLogic(object):
             f.close()
             
         self.callDesired_View(fname, view)
+<<<<<<< HEAD
     #=========================================================================================
         
     def callDesired_View(self,filename,view):# Done
         
+=======
+    
+        
+    def callDesired_View(self,filename,view):
+        
+>>>>>>> LinuxOsdag/master
         finCommonObj = FinCommonData(self.uiObj,self.resultObj,self.dictbeamdata,self.dictcoldata)
         finCommonObj.saveToSvg(str(filename),view)
     #========================================================================================= 
