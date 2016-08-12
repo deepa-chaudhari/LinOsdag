@@ -1,0 +1,9 @@
+connection shear finplate
+connectivity b2cw
+column sc400
+beam mb250
+mat steel1 fy=250 fu=410
+shear 280
+bolt hsfg 8.8 16
+plate steel1 t=20 [h=220] [w=150]
+weld t= 8

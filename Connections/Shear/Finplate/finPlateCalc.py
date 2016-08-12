@@ -218,6 +218,7 @@ def finConn(uiObj):
                 logger.warning(": Plate height required should be more than  %2.2f mm " % (min_plate_height))
                 logger.warning(": Maximum plate height allowed is %2.2f mm " % (max_plate_height))
                 logger.info(": Increase the plate height")
+                
             else:
                 logger.error(": Minimum required plate height is more than the clear depth of the beam")
                 logger.warning(": Plate height required should be more than  %2.2f mm " % (min_plate_height))

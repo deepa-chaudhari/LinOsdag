@@ -719,7 +719,6 @@ class MainController(QtGui.QMainWindow):
         fileName,pat =QtGui.QFileDialog.getSaveFileNameAndFilter(self,"Save File As","output/finplate/Report","Html Files (*.html)")
         fileName = str(fileName)
         self.callFin2D_Drawing("All")
-<<<<<<< HEAD
         commLogicObj = CommonDesignLogic(self.alist[0],self.alist[1],self.alist[2],self.alist[3],self.alist[4],self.alist[5],self.alist[6],self.alist[7],self.alist[8],self.display) 
         commLogicObj.call_designReport(fileName, popup_summary)
         # self.inputdict = self.uiObj#self.getuser_inputs()
@@ -738,7 +737,6 @@ class MainController(QtGui.QMainWindow):
         #             }
         # pdfkit.from_file(fileName, 'output/finplate/Report/finplaterepoRT.pdf', configuration=config, options=options)
         # #         pdfkit.from_file(fileName,'output/finplate/'+base+'.pdf',configuration=config, options=options)
-=======
         self.inputdict = self.uiObj#self.getuser_inputs()
         self.outdict = self.resultObj#self.outputdict()
         
@@ -756,7 +754,6 @@ class MainController(QtGui.QMainWindow):
                     }
         pdfkit.from_file(fileName, 'output/finplate/Report/finplaterepoRT.pdf', configuration=config, options=options)
 #         pdfkit.from_file(fileName,'output/finplate/'+base+'.pdf',configuration=config, options=options)
->>>>>>> LinuxOsdag/master
         
         
         QtGui.QMessageBox.about(self,'Information',"Report Saved")
@@ -1754,8 +1751,6 @@ class MainController(QtGui.QMainWindow):
         ''' This routine saves the 2D SVG image as per the connectivity selected
         SVG image created through svgwrite package which takes design INPUT and OUTPUT parameters from Finplate GUI.
         '''
-<<<<<<< HEAD
-=======
         self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
         self.ui.chkBxBeam.setChecked(QtCore.Qt.Unchecked)
         self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
@@ -1792,7 +1787,6 @@ class MainController(QtGui.QMainWindow):
         
     def callDesired_View(self,fileName,view):
         
->>>>>>> LinuxOsdag/master
         self.ui.chkBxFinplate.setChecked(QtCore.Qt.Unchecked)
         self.ui.chkBxBeam.setChecked(QtCore.Qt.Unchecked)
         self.ui.chkBxCol.setChecked(QtCore.Qt.Unchecked)
